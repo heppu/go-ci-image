@@ -20,6 +20,8 @@ RUN pip install docker-compose
 
 # Install go-junit-reporter for junit style reports
 RUN go get -u github.com/jstemmer/go-junit-report
+# Install static analysis tools
+RUN go get -u honnef.co/go/tools/...
 
 # Install pact tools for contract tests
 WORKDIR /
